@@ -12,13 +12,13 @@
 					<key>EndingColumnNumber</key>
 					<string>0</string>
 					<key>EndingLineNumber</key>
-					<string>89</string>
+					<string>90</string>
 					<key>StartingColumnNumber</key>
 					<string>0</string>
 					<key>StartingLineNumber</key>
-					<string>88</string>
+					<string>89</string>
 					<key>Timestamp</key>
-					<string>779745979.039912</string>
+					<string>783682212.446137</string>
 				</dict>
 				<key>rebasable-url</key>
 				<dict>
@@ -41,9 +41,9 @@
         }
 </string>
 				<key>trailing</key>
-				<string>    }
-    
-    private func toggleFavorite() {
+				<string>        .sheet(isPresented: $isShowingShareSheet) {
+            let title = tvShow.title ?? tvShow.name ?? "Unknown Title"
+            let overview = tvShow.overview ?? ""
 </string>
 			</dict>
 			<key>type</key>

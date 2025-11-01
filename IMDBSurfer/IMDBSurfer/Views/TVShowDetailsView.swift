@@ -1,6 +1,6 @@
 //
 //  TVShowDetailsView.swift
-//  IMDBSurfer
+//  TMDBSurfer
 //
 //  Created by Hadi Samara on 15/09/2025.
 //
@@ -12,7 +12,8 @@ struct TVShowDetailsView: View {
     let tvShow: TVShow
     @StateObject private var favoritesManager = FavoritesManager.shared
     @StateObject private var contentService = ContentService()
-    
+    @State private var isShowingShareSheet = false
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
@@ -64,7 +65,7 @@ struct TVShowDetailsView: View {
                     }
                     
                     Button(action: {
-                        shareTVShow()
+                        isShowingShareSheet = true
                     }) {
                         Image(systemName: "square.and.arrow.up")
                             .font(.title2)
@@ -87,6 +88,12 @@ struct TVShowDetailsView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $isShowingShareSheet) {
+            let title = tvShow.title ?? tvShow.name ?? "Unknown Title"
+            let overview = tvShow.overview ?? ""
+            let shareText = "Check out this TV show: \(title)\n\n\(overview)"
+            ActivityView(activityItems: [shareText])
+        }
     }
     
     private func toggleFavorite() {
@@ -104,21 +111,4 @@ struct TVShowDetailsView: View {
             }
         }
     }
-    
-    private func shareTVShow() {
-        let title = tvShow.title ?? tvShow.name ?? "Unknown Title"
-        let overview = tvShow.overview ?? ""
-        let shareText = "Check out this TV show: \(title)\n\n\(overview)"
-        
-        let activityViewController = UIActivityViewController(
-            activityItems: [shareText],
-            applicationActivities: nil
-        )
-        
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-           let window = windowScene.windows.first {
-            window.rootViewController?.present(activityViewController, animated: true)
-        }
-    }
 }
-

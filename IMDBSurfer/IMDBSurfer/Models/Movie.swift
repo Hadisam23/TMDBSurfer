@@ -1,6 +1,6 @@
 //
 //  Movie.swift
-//  IMDBSurfer
+//  TMDBSurfer
 //
 //  Created by Hadi Samara on 15/09/2025.
 //

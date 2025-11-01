@@ -1,13 +1,13 @@
 //
-//  IMDBSurferUITestsLaunchTests.swift
-//  IMDBSurferUITests
+//  TMDBSurferUITestsLaunchTests.swift
+//  TMDBSurferUITests
 //
 //  Created by Hadi Samara on 13/09/2025.
 //
 
 import XCTest
 
-final class IMDBSurferUITestsLaunchTests: XCTestCase {
+final class TMDBSurferUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

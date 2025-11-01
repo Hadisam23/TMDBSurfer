@@ -1,6 +1,6 @@
 //
 //  ContentService.swift
-//  IMDBSurfer
+//  TMDBSurfer
 //
 //  Created by Hadi Samara on 15/09/2025.
 //
@@ -69,7 +69,8 @@ class ContentService: ObservableObject {
         endpoint: String,
         completion: @escaping ([T]) -> Void
     ) {
-        let url = URL(string: "\(Constants.baseURL)/\(endpoint)?api_key=\(Constants.tmdbAPIKey)")!
+        guard let url = URL(string: "\(Constants.baseURL)/\(endpoint)?api_key=\(Constants.tmdbAPIKey)") else { return }
+        print(url)
         
         session.dataTask(with: url) { data, response, error in
             if let data = data {

@@ -1,6 +1,6 @@
 //
 //  MovieDetailsView.swift
-//  IMDBSurfer
+//  TMDBSurfer
 //
 //  Created by Hadi Samara on 15/09/2025.
 //
@@ -12,7 +12,8 @@ struct MovieDetailsView: View {
     let movie: Movie
     @StateObject private var favoritesManager = FavoritesManager.shared
     @StateObject private var contentService = ContentService()
-    
+    @State private var isShowingShareSheet = false
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
@@ -64,7 +65,7 @@ struct MovieDetailsView: View {
                     }
                     
                     Button(action: {
-                        shareMovie()
+                        isShowingShareSheet = true
                     }) {
                         Image(systemName: "square.and.arrow.up")
                             .font(.title2)
@@ -87,6 +88,12 @@ struct MovieDetailsView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $isShowingShareSheet) {
+            let title = movie.title ?? "Unknown Title"
+            let overview = movie.overview ?? ""
+            let shareText = "Check out this movie: \(title)\n\n\(overview)"
+            ActivityView(activityItems: [shareText])
+        }
     }
     
     private func toggleFavorite() {
@@ -102,22 +109,6 @@ struct MovieDetailsView: View {
             if let url = url {
                 UIApplication.shared.open(url)
             }
-        }
-    }
-    
-    private func shareMovie() {
-        let title = movie.title ?? "Unknown Title"
-        let overview = movie.overview ?? ""
-        let shareText = "Check out this movie: \(title)\n\n\(overview)"
-        
-        let activityViewController = UIActivityViewController(
-            activityItems: [shareText],
-            applicationActivities: nil
-        )
-        
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-           let window = windowScene.windows.first {
-            window.rootViewController?.present(activityViewController, animated: true)
         }
     }
 }

@@ -1,13 +1,13 @@
 //
-//  IMDBSurferUITests.swift
-//  IMDBSurferUITests
+//  TMDBSurferUITests.swift
+//  TMDBSurferUITests
 //
 //  Created by Hadi Samara on 13/09/2025.
 //
 
 import XCTest
 
-final class IMDBSurferUITests: XCTestCase {
+final class TMDBSurferUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

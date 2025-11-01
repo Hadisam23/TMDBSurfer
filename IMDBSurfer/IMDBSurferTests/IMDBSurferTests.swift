@@ -1,14 +1,14 @@
 //
-//  IMDBSurferTests.swift
-//  IMDBSurferTests
+//  TMDBSurferTests.swift
+//  TMDBSurferTests
 //
 //  Created by Hadi Samara on 13/09/2025.
 //
 
 import Testing
-@testable import IMDBSurfer
+@testable import TMDBSurfer
 
-struct IMDBSurferTests {
+struct TMDBSurferTests {
     
     // MARK: - Test 1: Movie Model URL Generation and Properties
     @Test("Movie should generate correct poster URL")

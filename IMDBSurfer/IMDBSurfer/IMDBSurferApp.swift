@@ -1,6 +1,6 @@
 //
-//  IMDBSurferApp.swift
-//  IMDBSurfer
+//  TMDBSurferApp.swift
+//  TMDBSurfer
 //
 //  Created by Hadi Samara on 13/09/2025.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct IMDBSurferApp: App {
+struct TMDBSurferApp: App {
     @StateObject private var themeManager = ThemeManager.shared
     
     init() {

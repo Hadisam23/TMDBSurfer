@@ -1,6 +1,6 @@
 //
 //  SearchView.swift
-//  IMDBSurfer
+//  TMDBSurfer
 //
 //  Created by Hadi Samara on 13/09/2025.
 //
