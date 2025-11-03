@@ -52,7 +52,7 @@ struct SearchResultsView: View {
 
 struct SearchResultCard: View {
     let result: SearchResult
-    @StateObject private var favoritesManager = FavoritesManager.shared
+    @ObservedObject private var favoritesManager = FavoritesManager.shared
     
     var body: some View {
         NavigationLink(destination: destinationView) {

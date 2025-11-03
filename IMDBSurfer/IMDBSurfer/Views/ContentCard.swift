@@ -11,7 +11,7 @@ import Kingfisher
 
 struct ContentCard<T: ContentItem>: View {
     let content: T
-    @StateObject private var favoritesManager = FavoritesManager.shared
+    @ObservedObject private var favoritesManager = FavoritesManager.shared
     
     var body: some View {
         NavigationLink(destination: destinationView) {

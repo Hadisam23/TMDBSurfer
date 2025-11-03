@@ -9,7 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct FavoritesView: View {
-    @StateObject private var favoritesManager = FavoritesManager.shared
+    @ObservedObject private var favoritesManager = FavoritesManager.shared
     @State private var selectedTab = 0
     
     var body: some View {
@@ -74,7 +74,7 @@ struct FavoritesView: View {
 
 struct FavoriteContentCard: View {
     let content: any ContentItem
-    @StateObject private var favoritesManager = FavoritesManager.shared
+    @ObservedObject private var favoritesManager = FavoritesManager.shared
     
     var body: some View {
         NavigationLink(destination: destinationView) {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F4D3D6C2EB6121A00956A94 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0F4D3D6B2EB6121300956A94 /* .gitignore */; };
 		0FCA5CAC2E76277700D8EBC4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0FCA5CAB2E76277700D8EBC4 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F4D3D6B2EB6121300956A94 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0FCA5C272E75667700D8EBC4 /* IMDBSurfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMDBSurfer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCA5C372E75667800D8EBC4 /* IMDBSurferTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMDBSurferTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCA5C412E75667800D8EBC4 /* IMDBSurferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMDBSurferUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,7 @@
 		0FCA5C1E2E75667600D8EBC4 = {
 			isa = PBXGroup;
 			children = (
+				0F4D3D6B2EB6121300956A94 /* .gitignore */,
 				0FCA5C292E75667700D8EBC4 /* IMDBSurfer */,
 				0FCA5C3A2E75667800D8EBC4 /* IMDBSurferTests */,
 				0FCA5C442E75667800D8EBC4 /* IMDBSurferUITests */,
@@ -221,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F4D3D6C2EB6121A00956A94 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

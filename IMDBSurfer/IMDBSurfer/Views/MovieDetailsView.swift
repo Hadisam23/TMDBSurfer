@@ -10,7 +10,7 @@ import Kingfisher
 
 struct MovieDetailsView: View {
     let movie: Movie
-    @StateObject private var favoritesManager = FavoritesManager.shared
+    @ObservedObject private var favoritesManager = FavoritesManager.shared
     @StateObject private var contentService = ContentService()
     @State private var isShowingShareSheet = false
 

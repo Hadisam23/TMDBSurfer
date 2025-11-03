@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct TMDBSurferApp: App {
-    @StateObject private var themeManager = ThemeManager.shared
+    @ObservedObject private var themeManager = ThemeManager.shared
     
     init() {
         // Configure Kingfisher for optimal performance

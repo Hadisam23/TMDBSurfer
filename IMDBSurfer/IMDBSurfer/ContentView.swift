@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MoviesView: View {
     @StateObject private var contentService = ContentService()
-    @StateObject private var themeManager = ThemeManager.shared
+    @ObservedObject private var themeManager = ThemeManager.shared
     @State private var showingSearchModal = false
     @State private var selectedTab = 0
     
